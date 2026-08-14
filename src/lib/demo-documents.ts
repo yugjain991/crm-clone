@@ -87,12 +87,12 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "AXIPM4821K",
       aadhaar: "4382 9124 5501",
-      email: "aisha.menon@enxt.ai",
+      email: "aisha.menon@combrain.com",
       phone: "+91 90000 11001",
       location: "Bengaluru",
       reportingTo: "Founder"
     },
-    `Aisha owns operating cadence, internal process hygiene, vendor coordination, and founder follow-through. She maintains weekly execution reviews, project owner check-ins, invoice reminders, and hiring coordination. Current focus is turning scattered updates into repeatable operating rituals for Enxt Brain.`
+    `Aisha owns operating cadence, internal process hygiene, vendor coordination, and founder follow-through. She maintains weekly execution reviews, project owner check-ins, invoice reminders, and hiring coordination. Current focus is turning scattered updates into repeatable operating rituals for ComBrain.`
   ),
   employee(
     "emp-rohan-iyer",
@@ -106,7 +106,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "BDQPI1934L",
       aadhaar: "7251 4902 1188",
-      email: "rohan.iyer@enxt.ai",
+      email: "rohan.iyer@combrain.com",
       phone: "+91 90000 11002",
       location: "Chennai",
       reportingTo: "Nikhil Verma"
@@ -125,7 +125,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "CQWPK6421J",
       aadhaar: "2198 3304 7762",
-      email: "meera.kapoor@enxt.ai",
+      email: "meera.kapoor@combrain.com",
       phone: "+91 90000 11003",
       location: "Mumbai",
       reportingTo: "Founder"
@@ -144,7 +144,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "DLMPS9351Q",
       aadhaar: "6632 1188 9041",
-      email: "karan.shah@enxt.ai",
+      email: "karan.shah@combrain.com",
       phone: "+91 90000 11004",
       location: "Ahmedabad",
       reportingTo: "Nikhil Verma"
@@ -163,7 +163,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "EAVPV7108D",
       aadhaar: "8871 4409 1206",
-      email: "nikhil.verma@enxt.ai",
+      email: "nikhil.verma@combrain.com",
       phone: "+91 90000 11005",
       location: "Hyderabad",
       reportingTo: "Founder"
@@ -182,7 +182,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "FJRPN2944M",
       aadhaar: "3401 2088 5510",
-      email: "priya.nair@enxt.ai",
+      email: "priya.nair@combrain.com",
       phone: "+91 90000 11006",
       location: "Kochi",
       reportingTo: "Founder"
@@ -201,7 +201,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "GQRPR5502H",
       aadhaar: "9027 6610 4381",
-      email: "sanjay.rao@enxt.ai",
+      email: "sanjay.rao@combrain.com",
       phone: "+91 90000 11007",
       location: "Pune",
       reportingTo: "Aisha Menon"
@@ -220,7 +220,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "HSTPS3104C",
       aadhaar: "5504 2918 3370",
-      email: "kavya.singh@enxt.ai",
+      email: "kavya.singh@combrain.com",
       phone: "+91 90000 11008",
       location: "Delhi",
       reportingTo: "Aisha Menon"
@@ -239,7 +239,7 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Active",
       pan: "JXYPQ8912N",
       aadhaar: "7166 4092 8803",
-      email: "imran.qureshi@enxt.ai",
+      email: "imran.qureshi@combrain.com",
       phone: "+91 90000 11009",
       location: "Lucknow",
       reportingTo: "Nikhil Verma"
@@ -258,12 +258,12 @@ const baseBrainDocuments: BrainDocument[] = [
       status: "Probation",
       pan: "KLPPA4107R",
       aadhaar: "1088 7642 3125",
-      email: "devika.arora@enxt.ai",
+      email: "devika.arora@combrain.com",
       phone: "+91 90000 11010",
       location: "Jaipur",
       reportingTo: "Rohan Iyer"
     },
-    `Devika creates prompt libraries, evaluation examples, response style guides, and project-specific AI behavior notes. She is currently building the founder tone and CRM answer templates for Enxt Brain.`
+    `Devika creates prompt libraries, evaluation examples, response style guides, and project-specific AI behavior notes. She is currently building the founder tone and CRM answer templates for ComBrain.`
   ),
   */
   project(
@@ -462,7 +462,7 @@ Success metric: Reduce compliance lookup time by 50 percent and improve audit pr
     "proj-founder-ops",
     "Founder Ops Copilot",
     {
-      client: "Internal - Enxt AI",
+      client: "Internal - ComBrain AI",
       phase: "Prototype",
       owner: "Aisha Menon",
       health: "Green",
@@ -486,7 +486,7 @@ Success metric: The founder can ask operational questions and update company rec
     "proj-lead-scoring",
     "Lead Scoring Engine",
     {
-      client: "Internal - Enxt AI",
+      client: "Internal - ComBrain AI",
       phase: "Planning",
       owner: "Priya Nair",
       health: "Green",
@@ -686,7 +686,7 @@ Success metric: Help sales spend more time on the top 20 percent of opportunitie
       interest: "Demand planning and procurement signals",
       nextAction: "Clarify procurement integration cost."
     },
-    `VectorFoods has a serious demand planning need and is comparing Enxt AI with a traditional analytics vendor. Win path depends on speed, explainability, and lower implementation burden.`
+    `VectorFoods has a serious demand planning need and is comparing ComBrain AI with a traditional analytics vendor. Win path depends on speed, explainability, and lower implementation burden.`
   ),
   lead(
     "lead-eduloop",
@@ -769,20 +769,20 @@ Success metric: Help sales spend more time on the top 20 percent of opportunitie
     `Riverline wants plant technicians to ask questions over maintenance SOPs and machine manuals. Needs offline-friendly deployment discussion and clear permissioning.`
   ),
   {
-    id: "system-enxt-brain-architecture",
+    id: "system-combrain-architecture",
     type: "system",
-    title: "Enxt Brain Architecture Note",
+    title: "ComBrain Architecture Note",
     status: "Draft",
     owner: "Founder Office",
     updatedAt: today,
     tags: ["architecture", "pinecone", "document-store", "write-mode"],
     fields: {
-      product: "Enxt Brain",
+      product: "ComBrain",
       principle: "Documents are the source of truth",
       futureVectorDb: "Pinecone",
       aiWritePolicy: "Proposal, review, approval, audit"
     },
-    body: `Enxt Brain is a document-native company brain. Employees, projects, clients, leads, policies, meetings, and founder notes should all exist as documents with structured metadata.
+    body: `ComBrain is a document-native company brain. Employees, projects, clients, leads, policies, meetings, and founder notes should all exist as documents with structured metadata.
 
 The UI can present these documents as CRM boards, employee tables, project dashboards, and chat context. The AI layer should retrieve relevant documents, answer with citations, and propose edits when write mode is enabled.
 
@@ -804,7 +804,7 @@ export const initialMockSubscriptions: BrainDocument[] = [
       vendor: "OpenAI Inc.",
       website: "https://openai.com",
       category: "AI Tools",
-      description: "LLM API access for GPT-4o, GPT-4, and embeddings for Enxt Brain product development.",
+      description: "LLM API access for GPT-4o, GPT-4, and embeddings for ComBrain product development.",
       billingCycle: "Monthly",
       currency: "USD",
       cost: 850,
@@ -816,11 +816,11 @@ export const initialMockSubscriptions: BrainDocument[] = [
       owner: "Rohan Iyer",
       department: "Engineering",
       paymentMethod: "Corporate Visa - 4821",
-      billingEmail: "engineering@enxt.ai",
+      billingEmail: "engineering@combrain.com",
       autoRenewal: true,
       status: "Active"
     },
-    body: "LLM API access for GPT-4o, GPT-4, and embeddings for Enxt Brain product development."
+    body: "LLM API access for GPT-4o, GPT-4, and embeddings for ComBrain product development."
   },
   {
     id: "sub-higgsfield",
@@ -847,7 +847,7 @@ export const initialMockSubscriptions: BrainDocument[] = [
       owner: "Priya Nair",
       department: "Marketing",
       paymentMethod: "Corporate Visa - 4821",
-      billingEmail: "marketing@enxt.ai",
+      billingEmail: "marketing@combrain.com",
       autoRenewal: true,
       status: "Due Soon"
     },
@@ -878,7 +878,7 @@ export const initialMockSubscriptions: BrainDocument[] = [
       owner: "Rohan Iyer",
       department: "Engineering",
       paymentMethod: "Corporate Visa - 4821",
-      billingEmail: "finance@enxt.ai",
+      billingEmail: "finance@combrain.com",
       autoRenewal: false,
       status: "Expired"
     },
@@ -909,7 +909,7 @@ export const initialMockSubscriptions: BrainDocument[] = [
       owner: "Aisha Menon",
       department: "HR & Admin",
       paymentMethod: "Auto Debit - HDFC Bank",
-      billingEmail: "hr@enxt.ai",
+      billingEmail: "hr@combrain.com",
       autoRenewal: true,
       status: "Renewal Needed"
     },
@@ -940,7 +940,7 @@ export const initialMockSubscriptions: BrainDocument[] = [
       owner: "Rohan Iyer",
       department: "Engineering",
       paymentMethod: "Corporate Visa - 4821",
-      billingEmail: "engineering@enxt.ai",
+      billingEmail: "engineering@combrain.com",
       autoRenewal: true,
       status: "Active"
     },
