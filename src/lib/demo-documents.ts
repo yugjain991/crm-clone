@@ -267,244 +267,224 @@ const baseBrainDocuments: BrainDocument[] = [
   ),
   */
   project(
-    "proj-talentpulse",
-    "TalentPulse HR Copilot",
+    "proj-smartcrm",
+    "SmartCRM AI Assistant",
     {
-      client: "Nova Retail Labs",
+      client: "Internal - ComBrain AI",
       phase: "Build",
-      owner: "Rohan Iyer",
+      owner: "Aarav Deshmukh",
       health: "Green",
       priority: "High",
-      dueDate: "2026-08-15",
-      budgetInr: 1850000,
-      progress: 62,
-      risk: "Employee data privacy review must be completed before production sync."
+      dueDate: "2026-10-15",
+      budgetInr: 500000,
+      progress: 65,
+      risk: "Write-mode mutations need founder approval safeguards before production."
     },
-    `Objective: Build an HR copilot that answers employee policy, leave, payroll, and internal process questions from approved company documents.
+    `Objective: Build an AI-powered CRM assistant that lets the founder query leads, pipeline, and client data through natural language chat.
 
-Scope: Document ingestion, role-aware retrieval, answer citations, admin review workflow, and audit logs for sensitive queries.
+Scope: Chat interface, document-grounded answers, lead stage management, contact search, and AI-proposed edits with approval workflow.
 
-Data sources: HR handbook, leave policy, payroll FAQ, offer letter templates, onboarding checklists, and anonymized support tickets.
+Current status: Core chat and read-mode are functional. Write-mode edit proposals and approval flow are in development.
 
-Current status: Retrieval pipeline and admin dashboard are working in staging. The team is tuning answer confidence thresholds and redaction behavior.
-
-Success metric: Reduce routine HR support questions by 45 percent within 60 days of launch while keeping answer escalation paths clear.`
+Success metric: Founder can manage entire CRM pipeline from a single chat interface without switching tools.`
   ),
   project(
-    "proj-legaldoc",
-    "LegalDoc Summarizer",
+    "proj-whatsapp-bot",
+    "WhatsApp Business Bot",
     {
-      client: "Apex Legal Partners",
+      client: "Internal - ComBrain AI",
+      phase: "Pilot",
+      owner: "Harsh Gupta",
+      health: "Green",
+      priority: "High",
+      dueDate: "2026-09-30",
+      budgetInr: 350000,
+      progress: 72,
+      risk: "WhatsApp API rate limits may throttle broadcast messages during peak hours."
+    },
+    `Objective: Enable automated WhatsApp notifications to employees for task updates, welcome messages, and broadcast communications.
+
+Scope: WhatsApp Cloud API integration, employee onboarding messages, task assignment alerts, webhook handling, and admin broadcast panel.
+
+Current status: Pilot running with welcome messages and task notifications. Broadcast feature is being tested with admin controls.
+
+Success metric: 90% of employees receive task updates within 2 minutes of assignment via WhatsApp.`
+  ),
+  project(
+    "proj-doc-manager",
+    "Employee Document Vault",
+    {
+      client: "Internal - ComBrain AI",
+      phase: "QA",
+      owner: "Megha Tiwari",
+      health: "Green",
+      priority: "Medium",
+      dueDate: "2026-09-20",
+      budgetInr: 200000,
+      progress: 85,
+      risk: "Google Drive OAuth token refresh needs monitoring for uninterrupted uploads."
+    },
+    `Objective: Centralize employee document management — offer letters, PAN cards, Aadhaar, bank details — with Google Drive integration.
+
+Scope: Document upload to Drive, status tracking (Available/Missing), viewer modal, and per-employee document dashboard.
+
+Current status: Upload and viewing are functional. QA is testing edge cases around file size limits and document format validation.
+
+Success metric: All employee documents accessible from one dashboard with zero manual folder management.`
+  ),
+  project(
+    "proj-ecommerce-ai",
+    "ShopSense AI Product Recommender",
+    {
+      client: "UrbanStyle Fashion",
+      phase: "Build",
+      owner: "Tanvi Reddy",
+      health: "Amber",
+      priority: "High",
+      dueDate: "2026-11-15",
+      budgetInr: 1800000,
+      progress: 40,
+      risk: "Product catalog has inconsistent tagging which affects recommendation quality."
+    },
+    `Objective: Build a personalized product recommendation engine for an e-commerce fashion brand using browsing and purchase history.
+
+Scope: Product embedding pipeline, collaborative filtering, real-time recommendation API, A/B testing framework, and analytics dashboard.
+
+Current status: Product embeddings are generated. Building the recommendation API and integration with the storefront.
+
+Success metric: Increase average order value by 15% and improve product discovery click-through rate by 25%.`
+  ),
+  project(
+    "proj-clinic-scheduler",
+    "ClinicFlow Appointment System",
+    {
+      client: "Harmony Health Clinics",
       phase: "Discovery",
-      owner: "Devika Arora",
+      owner: "Riya Kapoor",
       health: "Amber",
       priority: "Medium",
-      dueDate: "2026-09-05",
-      budgetInr: 1320000,
-      progress: 28,
-      risk: "Matter confidentiality rules need sign-off before sample documents can be processed."
+      dueDate: "2026-12-01",
+      budgetInr: 1200000,
+      progress: 18,
+      risk: "Multiple clinic locations have different scheduling rules that need unified handling."
     },
-    `Objective: Create a secure assistant that summarizes contracts, flags non-standard clauses, and prepares partner review notes.
+    `Objective: Create an AI-assisted appointment scheduling system that handles patient booking, rescheduling, and doctor availability management.
 
-Scope: PDF parsing, clause extraction, comparison against firm playbooks, matter-level permissions, and exportable review summaries.
+Scope: Multi-location support, doctor calendar sync, patient WhatsApp reminders, cancellation handling, and waitlist automation.
 
-Data sources: NDA samples, master service agreements, redline examples, clause library, and partner review memos.
+Current status: Discovery calls completed. Requirements gathered from 3 clinic locations. Starting architecture design.
 
-Current status: Discovery calls identified three priority document types. The legal team is preparing sanitized samples for evaluation.
-
-Success metric: Cut first-pass contract review time by 30 percent without reducing partner control over final wording.`
+Success metric: Reduce no-show rate by 30% and cut receptionist scheduling time by 50%.`
   ),
   project(
-    "proj-invoice-agent",
-    "Invoice Intelligence Agent",
+    "proj-invoice-ocr",
+    "InvoiceIQ Extraction Engine",
     {
-      client: "FinTrust Capital",
-      phase: "QA",
-      owner: "Imran Qureshi",
+      client: "TrustBridge Finance",
+      phase: "Build",
+      owner: "Aarav Deshmukh",
       health: "Green",
       priority: "High",
-      dueDate: "2026-07-22",
-      budgetInr: 2100000,
-      progress: 81,
-      risk: "Vendor invoice formats change frequently and need monitoring."
+      dueDate: "2026-10-30",
+      budgetInr: 2200000,
+      progress: 52,
+      risk: "Handwritten invoices have lower OCR accuracy and need a manual review fallback."
     },
-    `Objective: Automate invoice intake, entity extraction, approval routing, duplicate detection, and finance team exception review.
+    `Objective: Automate invoice data extraction from PDF and image formats with AI-powered OCR and structured data output.
 
-Scope: OCR-assisted ingestion, structured extraction, confidence scoring, ERP-ready export files, and finance dashboard queues.
+Scope: OCR processing, field extraction (vendor, amount, date, GST), confidence scoring, duplicate detection, and ERP-ready export.
 
-Data sources: Vendor invoices, purchase orders, payment terms, tax IDs, and historical rejection reasons.
+Current status: Core extraction pipeline works for typed invoices. Building confidence scoring and the review queue for low-confidence extractions.
 
-Current status: Extraction accuracy is strong on recurring vendors. QA is focused on edge cases, handwritten notes, and tax field mismatches.
-
-Success metric: Process 70 percent of incoming invoices without manual re-keying while preserving human approval checkpoints.`
+Success metric: Process 75% of invoices without manual data entry while maintaining 98% extraction accuracy.`
   ),
   project(
-    "proj-retail-forecast",
-    "Retail Demand Forecaster",
+    "proj-campus-recruit",
+    "CampusConnect Recruitment Platform",
     {
-      client: "Nova Retail Labs",
+      client: "TechVista Solutions",
       phase: "Prototype",
-      owner: "Nikhil Verma",
+      owner: "Vikram Chauhan",
+      health: "Green",
+      priority: "Medium",
+      dueDate: "2026-11-30",
+      budgetInr: 950000,
+      progress: 30,
+      risk: "Integration with multiple university portals requires custom adapters for each."
+    },
+    `Objective: Build a campus recruitment management platform that streamlines candidate tracking from application to offer.
+
+Scope: University portal integration, resume parsing, interview scheduling, assessment tracking, offer letter generation, and analytics.
+
+Current status: Resume parser and candidate pipeline UI are prototyped. Working on university portal connectors.
+
+Success metric: Reduce time-to-hire for campus recruits by 40% and improve candidate experience scores.`
+  ),
+  project(
+    "proj-supply-chain",
+    "SupplyMind Demand Planner",
+    {
+      client: "GreenBasket Organics",
+      phase: "Planning",
+      owner: "Ishaan Pillai",
+      health: "Green",
+      priority: "High",
+      dueDate: "2027-01-15",
+      budgetInr: 2800000,
+      progress: 12,
+      risk: "Historical sales data has gaps in certain product categories that need interpolation."
+    },
+    `Objective: Forecast demand for perishable organic products to optimize inventory and reduce wastage.
+
+Scope: Sales data analysis, seasonal demand modeling, supplier lead time tracking, wastage prediction, and reorder point optimization.
+
+Current status: Planning phase. Data audit completed. Defining forecast model architecture and dashboard requirements.
+
+Success metric: Reduce food wastage by 20% and improve stock availability to 95% for top-selling SKUs.`
+  ),
+  project(
+    "proj-legal-review",
+    "ContractLens Legal Analyzer",
+    {
+      client: "Apex Legal Associates",
+      phase: "Discovery",
+      owner: "Ananya Bhat",
       health: "Amber",
+      priority: "Medium",
+      dueDate: "2026-12-20",
+      budgetInr: 1500000,
+      progress: 15,
+      risk: "Confidentiality requirements limit the sample contracts available for model training."
+    },
+    `Objective: Analyze legal contracts to flag non-standard clauses, extract key terms, and generate comparison summaries.
+
+Scope: PDF parsing, clause classification, risk flagging, playbook comparison, exportable review notes, and matter-level access control.
+
+Current status: Discovery phase. Initial meetings with legal team completed. Preparing sanitized contract samples for prototype.
+
+Success metric: Reduce first-pass contract review time by 35% without compromising legal oversight.`
+  ),
+  project(
+    "proj-founder-dashboard",
+    "Founder Command Center",
+    {
+      client: "Internal - ComBrain AI",
+      phase: "Build",
+      owner: "Simran Kaur",
+      health: "Green",
       priority: "High",
       dueDate: "2026-10-01",
-      budgetInr: 2450000,
-      progress: 36,
-      risk: "Sales history is uneven across regions, which may affect forecast confidence."
-    },
-    `Objective: Forecast demand for high-velocity retail SKUs and explain what is driving changes in predicted demand.
-
-Scope: Sales data normalization, seasonal feature engineering, campaign event tracking, forecast dashboard, and store-level recommendations.
-
-Data sources: POS exports, campaign calendars, inventory records, weather markers, and regional holiday schedules.
-
-Current status: Baseline models are producing stable weekly forecasts. The next sprint adds explainability and stockout detection.
-
-Success metric: Improve replenishment planning accuracy by 18 percent across pilot categories.`
-  ),
-  project(
-    "proj-clinic-voice",
-    "Clinic Voice Notes SLM",
-    {
-      client: "MediCore Clinics",
-      phase: "Build",
-      owner: "Rohan Iyer",
-      health: "Green",
-      priority: "High",
-      dueDate: "2026-08-30",
-      budgetInr: 1980000,
-      progress: 57,
-      risk: "Medical abbreviations vary by doctor and need a custom validation loop."
-    },
-    `Objective: Convert doctor-patient conversations into structured visit notes, follow-up tasks, and patient-friendly summaries.
-
-Scope: Audio transcript cleanup, speciality-aware summarization, review-before-save workflow, and export into clinic systems.
-
-Data sources: Sample transcripts, speciality templates, doctor note examples, medication lists, and follow-up protocols.
-
-Current status: The summarizer is usable for general medicine and dermatology pilots. Accuracy testing is underway with doctor feedback.
-
-Success metric: Save each doctor 6 to 8 minutes per consultation note while keeping final approval with the doctor.`
-  ),
-  project(
-    "proj-sales-intel",
-    "Sales Meeting Intelligence",
-    {
-      client: "UrbanKart Commerce",
-      phase: "Pilot",
-      owner: "Priya Nair",
-      health: "Green",
-      priority: "Medium",
-      dueDate: "2026-07-31",
-      budgetInr: 1250000,
+      budgetInr: 400000,
       progress: 70,
-      risk: "Adoption depends on sales managers enforcing clean next-step ownership."
+      risk: "Real-time data aggregation from multiple sources may cause dashboard load time issues."
     },
-    `Objective: Turn sales calls into account summaries, objections, buying signals, follow-up tasks, and CRM updates.
+    `Objective: Build a unified command center dashboard for the founder showing employees, projects, CRM, tasks, payroll, and key metrics at a glance.
 
-Scope: Transcript ingestion, account timeline, action extraction, deal risk scoring, and weekly manager digest.
+Scope: Dashboard cards, animated metrics, project health overview, employee status summary, pipeline value tracking, and AI chat integration.
 
-Data sources: Call transcripts, CRM notes, proposal history, sales playbook, and product pricing sheets.
+Current status: Core dashboard layout and animated stats are complete. Integrating real-time data from all modules.
 
-Current status: Pilot users are receiving meeting summaries within five minutes of upload. Next focus is automatic deal stage suggestions.
-
-Success metric: Improve follow-up completion and forecast accuracy across the pilot sales pod.`
-  ),
-  project(
-    "proj-support-autopilot",
-    "Support Autopilot",
-    {
-      client: "LearnSphere EdTech",
-      phase: "Discovery",
-      owner: "Sanjay Rao",
-      health: "Amber",
-      priority: "Medium",
-      dueDate: "2026-09-18",
-      budgetInr: 1560000,
-      progress: 22,
-      risk: "Support taxonomy is inconsistent and needs cleanup before automation."
-    },
-    `Objective: Answer repetitive support questions, recommend help articles, and draft escalation summaries for agents.
-
-Scope: Knowledge base cleanup, intent classification, escalation rules, human handoff, and quality review dashboards.
-
-Data sources: Zendesk exports, help center articles, product release notes, refund policy, and historical escalations.
-
-Current status: Discovery found high-volume categories around login, billing, and course access. Data cleanup is the critical path.
-
-Success metric: Deflect 35 percent of low-complexity tickets while improving escalation context quality.`
-  ),
-  project(
-    "proj-compliance-brain",
-    "Compliance Knowledge Brain",
-    {
-      client: "FinTrust Capital",
-      phase: "Build",
-      owner: "Nikhil Verma",
-      health: "Green",
-      priority: "High",
-      dueDate: "2026-09-10",
-      budgetInr: 2750000,
-      progress: 49,
-      risk: "Answers must cite policy sections and avoid unsupported interpretations."
-    },
-    `Objective: Give compliance teams a trusted assistant for policy lookup, control evidence, audit preparation, and internal procedure questions.
-
-Scope: Document versioning, retrieval with citations, source-aware answer generation, approval workflow, and audit evidence packs.
-
-Data sources: Compliance manuals, internal SOPs, RBI circular notes, audit observations, and policy exception registers.
-
-Current status: Version-aware document ingestion is complete. The team is testing citation precision across long policy documents.
-
-Success metric: Reduce compliance lookup time by 50 percent and improve audit preparation consistency.`
-  ),
-  project(
-    "proj-founder-ops",
-    "Founder Ops Copilot",
-    {
-      client: "Internal - ComBrain AI",
-      phase: "Prototype",
-      owner: "Aisha Menon",
-      health: "Green",
-      priority: "High",
-      dueDate: "2026-07-15",
-      budgetInr: 900000,
-      progress: 44,
-      risk: "Founder-level write access must be protected with explicit review and audit trails."
-    },
-    `Objective: Give the founder a single chat interface to ask about employees, projects, clients, leads, payroll, risks, and operating priorities.
-
-Scope: Document-native company memory, CRM views, employee records, project docs, answer grounding, AI edit proposals, and approval-based document mutation.
-
-Data sources: Employee documents, project docs, CRM notes, meeting summaries, founder memos, and future Google Sheet imports.
-
-Current status: Demo corpus and dashboard shell are being created first. Real ingestion, auth, Pinecone, and database persistence follow after the MVP UX is validated.
-
-Success metric: The founder can ask operational questions and update company records from one clean workspace.`
-  ),
-  project(
-    "proj-lead-scoring",
-    "Lead Scoring Engine",
-    {
-      client: "Internal - ComBrain AI",
-      phase: "Planning",
-      owner: "Priya Nair",
-      health: "Green",
-      priority: "Medium",
-      dueDate: "2026-08-20",
-      budgetInr: 650000,
-      progress: 18,
-      risk: "Lead quality signals are currently subjective and need consistent definitions."
-    },
-    `Objective: Rank inbound and outbound leads by fit, urgency, budget signals, and similarity to successful clients.
-
-Scope: CRM field design, lead source tracking, score explanation, sales next-best action, and weekly founder pipeline digest.
-
-Data sources: Lead documents, proposal history, won/lost notes, website forms, meeting transcripts, and email summaries.
-
-Current status: Planning is focused on defining scoring signals and avoiding black-box sales prioritization.
-
-Success metric: Help sales spend more time on the top 20 percent of opportunities and improve proposal-to-close conversion.`
+Success metric: Founder gets complete business overview in under 10 seconds without navigating multiple screens.`
   ),
   client(
     "client-nova-retail",
