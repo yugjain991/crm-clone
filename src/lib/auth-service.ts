@@ -31,6 +31,16 @@ export async function getRBACStore(): Promise<RBACStoreData> {
     if (store.users) {
       store.users = store.users.filter((u) => !seededIds.includes(u.id));
     }
+    // Always ensure the hardcoded superadmin exists (prevent lockout if Supabase data drifts)
+    for (const seedUser of INITIAL_USERS) {
+      const idx = store.users.findIndex((u) => u.id === seedUser.id);
+      if (idx === -1) {
+        store.users.push(seedUser);
+      } else {
+        // Fully sync seed user fields (email, password, etc.) with code defaults
+        store.users[idx] = { ...store.users[idx], ...seedUser };
+      }
+    }
     return store;
   } catch (err) {
     console.warn('[auth-service] Supabase query fallback to initial:', err);

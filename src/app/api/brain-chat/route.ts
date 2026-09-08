@@ -184,7 +184,7 @@ export async function POST(request: NextRequest) {
     // Non-fatal: proceed without task data
   }
 
-  const model = process.env.GEMINI_MODEL ?? "gemini-3.5-flash";
+  const model = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
   let apiResponse: Response;
 
   try {
