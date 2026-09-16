@@ -104,15 +104,29 @@ export default function EmployeeTasksView({ employees, projects = [], onAssignCl
   const [editingTask, setEditingTask] = useState<TaskData | null>(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
+  // ── localStorage helpers for demo fallback ─────────────────────────
+  const LS_TASKS_KEY = 'combrain_tasks_demo';
+  const getLocalTasks = (): Task[] => {
+    try {
+      const raw = typeof window !== 'undefined' ? localStorage.getItem(LS_TASKS_KEY) : null;
+      return raw ? JSON.parse(raw) : [];
+    } catch { return []; }
+  };
+  const saveLocalTasks = (t: Task[]) => {
+    try { localStorage.setItem(LS_TASKS_KEY, JSON.stringify(t)); } catch {}
+  };
+
   const load = async (isInitial = false) => {
     if (isInitial) setLoading(true);
     try {
       const res = await fetch(`/api/tasks?_t=${Date.now()}`);
+      if (!res.ok) throw new Error('API error');
       const data = await res.json();
-      
+      if (!Array.isArray(data)) throw new Error('Bad response');
+
       const reqRes = await fetch(`/api/time-change-requests?_t=${Date.now()}`);
-      const reqData = await reqRes.json();
-      
+      const reqData = reqRes.ok ? await reqRes.json() : [];
+
       // Migrate old tasks that may still have single assignedEmployeeId
       const migrated = data.map((t: any) => ({
         ...t,
@@ -121,7 +135,10 @@ export default function EmployeeTasksView({ employees, projects = [], onAssignCl
       setTasks(migrated);
       setChangeRequests(reqData || []);
     } catch {
-      onShowToast?.('Failed to load tasks.', 'error');
+      // API unavailable — use localStorage for demo
+      const local = getLocalTasks();
+      setTasks(local);
+      setChangeRequests([]);
     } finally {
       if (isInitial) setLoading(false);
     }
@@ -235,20 +252,32 @@ export default function EmployeeTasksView({ employees, projects = [], onAssignCl
   }, []);
 
   const deleteTask = async (id: string) => {
-    await fetch('/api/tasks', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id }),
-    });
+    // Mirror to localStorage
+    const updated = getLocalTasks().filter(t => t.id !== id);
+    saveLocalTasks(updated);
+    // Try backend too (silently)
+    try {
+      await fetch('/api/tasks', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+    } catch { /* ignore */ }
     load();
   };
 
   const updateStatus = async (id: string, newStatus: Task['status']) => {
-    await fetch('/api/tasks', {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id, updates: { status: newStatus } }),
-    });
+    // Mirror to localStorage
+    const updated = getLocalTasks().map(t => t.id === id ? { ...t, status: newStatus } : t);
+    saveLocalTasks(updated);
+    // Try backend too (silently)
+    try {
+      await fetch('/api/tasks', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, updates: { status: newStatus } }),
+      });
+    } catch { /* ignore */ }
     load();
   };
 

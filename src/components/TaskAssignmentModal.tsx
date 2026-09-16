@@ -139,7 +139,26 @@ export default function TaskAssignmentModal({
         // ── CREATE MODE: POST new task ──────────────────────────
         const combinedDueDate = dueTime ? `${dueDate}T${dueTime}` : dueDate;
 
-        // Attempt to save to backend; silently ignore errors for demo reliability
+        // Build the new task object
+        const newTask = {
+          id: `task-${Date.now()}`,
+          title,
+          description,
+          dueDate: combinedDueDate,
+          dueTime: dueTime || '',
+          status: status as any,
+          assignedEmployeeIds: selectedEmployeeIds,
+        };
+
+        // Save to localStorage so it shows on the task board (demo fallback)
+        try {
+          const LS_KEY = 'combrain_tasks_demo';
+          const existing = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+          existing.push(newTask);
+          localStorage.setItem(LS_KEY, JSON.stringify(existing));
+        } catch { /* ignore */ }
+
+        // Attempt to save to backend too (silently ignore errors)
         try {
           await fetch('/api/tasks', {
             method: 'POST',
@@ -149,9 +168,7 @@ export default function TaskAssignmentModal({
               assignedEmployeeIds: selectedEmployeeIds,
             }),
           });
-        } catch (_err) {
-          // Backend unavailable — continue to show success for demo
-        }
+        } catch { /* Backend unavailable — localStorage has us covered */ }
 
         // Always show success toast (WhatsApp notifications skipped for demo)
         const assigneeCount = selectedEmployeeIds.length;
