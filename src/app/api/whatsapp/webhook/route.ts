@@ -359,7 +359,7 @@ async function processWebhookPayload(payload: any) {
       const apiKey = process.env.GEMINI_API_KEY;
       if (apiKey) {
         try {
-          const model = process.env.GEMINI_MODEL ?? "gemini-1.5-flash";
+          const model = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
           const prompt = `You are ComBrain, an AI assistant for ComBrain. You are talking to a user whose phone number is not recognized in the employee database.
 The user sent you this message: "${textBody}"
 Reply to them in a helpful, professional, and concise manner. Let them know you are the ComBrain AI assistant.`;
@@ -428,7 +428,7 @@ Reply to them in a helpful, professional, and concise manner. Let them know you 
       const apiKey = process.env.GEMINI_API_KEY;
       if (apiKey) {
         try {
-          const model = process.env.GEMINI_MODEL ?? "gemini-1.5-flash";
+          const model = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
           const tasksContext = employeeTasks.length > 0
             ? employeeTasks.map((t: any) => `- ${t.title} (Status: ${t.status}, Current Deadline: ${t.due_date} at ${t.due_time || '18:00'})`).join('\n')
             : 'No active tasks.';

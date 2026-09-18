@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       const apiKey = process.env.GEMINI_API_KEY;
       if (apiKey) {
         try {
-          const model = process.env.GEMINI_MODEL || "gemini-1.5-flash";
+          const model = process.env.GEMINI_MODEL || "gemini-3.6-flash";
           const prompt = `You are ComBrain, the AI assistant for ComBrain AI.
 Write an enthusiastic, warm, single-line WhatsApp welcome message for team member "${employeeName}".
 Mention that they are set up on the ComBrain portal and can reply with "Hi" anytime to view assigned tasks, update project status, or chat with the AI.
