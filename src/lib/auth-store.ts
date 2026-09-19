@@ -15,7 +15,17 @@ export const ALL_MODULES: { key: ModuleKey; label: string }[] = [
 export const INITIAL_USERS: UserAccount[] = [
   {
     id: "usr-admin-01",
-    name: "Super Admin",
+    name: "Super Admin (EnxtBrain)",
+    email: "admin@enxtbrain.com",
+    password: "Admin@123",
+    role: "superadmin",
+    department: "Executive",
+    is_active: true,
+    created_at: "2026-01-01T00:00:00Z"
+  },
+  {
+    id: "usr-admin-combrain",
+    name: "Super Admin (ComBrain)",
     email: "admin@combrain.com",
     password: "Admin@123",
     role: "superadmin",
